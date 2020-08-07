@@ -1,6 +1,6 @@
 # NAME....
 
-## Interactive Milstone Project
+## Interactive Frontend Development Milestone Project
 
 
 ![Image]()FAVICON
@@ -27,6 +27,8 @@ Please click [here] () for my live website.
   - [Content](#content)
   - [Media](#media)
 * [Acknowledgements](#acknowledgements)
+
+## UX
 
 ### User Stories
 
