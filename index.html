@@ -1,99 +1,111 @@
 <DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  
-  <title>Miss Or Match</title>
-  
+  <meta name="viewport" content="width=deice-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  
-</head>  
-
-<body>
-  <section class="memory-board">
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="assets/images/buttery-1.png" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="assets/images/buttery-2.png" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-    <div class="game-card">
-    <img class="face-up" src="assets/images/stars.png" alt=""/>
-    <img class="face-down" src="" alt=""/>  
-    </div>
-  </section>  
   <script src="script.js"></script>
+  <title>Miss Or Match</title>
+</head>  
+<body>
+  <h1 class="game-title">Miss-or-Match</h1>
+  <div class="overlay-text visible">
+    Click to Play
+  </div>
+  <div id="game-over" class="overlay-text">
+    OUT OF TIME!
+    <span class="overlay-text-small">Click to Replay</span>
+  </div>
+  <div id="you-win-text" class="overlay-text">
+    YOU WIN
+    <span class="overlay-text-small">Click to Replay</span> 
+  </div>
+  <div class="game-container">
+   <div class="game-info-container"> 
+    <div class="game-info">
+      Time <span id="time-remaining">100</span>
+    </div>
+    <div class="game-info">
+      Flips <span id="flips">0</span>
+    </div>
+  </div>
+  <section class="memory-board">
+   <div class="game-card-back">
+    <img class="stars" src="assets/images/stars.png" alt=""/>
+   </div>  
+   <div class="game-card-front"> 
+     <img class="butterfly-1" src="assets/images/buttery-1.png" alt=""/>  
+    </div>
+    <div class="game-card-back">
+    <img class="stars" src="assets/images/stars.png" alt=""/>
+    </div>
+    <div class="game-card-front">
+    <img class="butterfly-1" src="assets/images/buttery-2.png" alt=""/>  
+    </div>
+    <div class="game-card-back">
+    <img class="stars" src="assets/images/stars.png" alt=""/>
+    </div>
+    <div class="game-card-front">
+    <img class="butterfly-2" src="" alt=""/>  
+    </div>
+    <div class="game-card-back">
+    <img class="stars" src="assets/images/stars.png" alt=""/>
+    </div>
+    <div class="game-card-front">
+    <img class="butterfly-2" src="" alt=""/>  
+    </div>
+    <div class="game-card-back">
+    <img class="stars" src="assets/images/stars.png" alt=""/>
+    </div>
+     <div clas="game-card-front"> 
+      <img class="butterfly-3" src="" alt=""/>  
+    </div>
+    <div class="game-card-back">
+    <img class="stars" src="assets/images/stars.png" alt=""/>
+    </div>
+    <div>
+    <div class="game-card-front">
+    <img class="butterfly-3" src="" alt=""/>
+    </div>
+    <div class="game-card-back">
+      <img class="stars" src="" alt=""/>  
+      </div> 
+    <div class="game-card-front">
+    <img class="butterfly-4" src="assets/images/stars.png" alt=""/>
+     </div>
+      <div class="game-card-back">
+        <img class="stars" src="" alt=""/>
+      </div>
+       <div class="game-card-front">
+        <img class="butterfly-4" src="" alt=""/>  
+      </div>
+    <div class="game-card-back">
+      <img class="stars" src="" alt=""/>
+      </div>
+      <div class="game-card-front">
+        <img class="butterfly-5" src="" alt=""/>
+      </div>
+      <div class="game-card-back">
+        <img class="stars" src="" alt=""/>
+      </div>
+      <div class="game-card-front">
+        <img class="butterfly-5" src="" alt=""/>
+      </div>
+      <div class="game-card-back">
+        <img class="stars" src="" alt=""/>
+      </div>
+      <div class="game-card-front">
+        <img class="butterfly-6" src="" alt="">
+      </div>
+      <div class="game-card-back">
+        <img class="stars" src="" alt="">
+      </div>
+      <div class="game-card-front">
+        <img class="butterfly-6" src="" alt=""/>
+      </div>      
+  </section>  
+  
 </body>
   </html>  
   
