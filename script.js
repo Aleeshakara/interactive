@@ -36,6 +36,6 @@ class MissOrMatch {
   }
   victory() {
     clearInterval(this.countdown);
-    document.getElementById('vi).classList.add('visible');
+    document.getElementById('you-win-text').classList.add('visible');
   }                          
     
