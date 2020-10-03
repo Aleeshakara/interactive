@@ -1,10 +1,10 @@
 class MissOrMatch {
-  constructor (totalTime, cards) {
+  constructor(totalTime, cards) {
     this.cardsArray = cards;
     this.totalTime = totalTime;
     this.timeRemaining = totalTime;
-    this.timer=document.getElementById('time-remaining')
-    this.ticker=document.getElemementById('flips');
+    this.timer = document.getElementById('time-remaining')
+    this.ticker = document.getElemementById('flips');
   }
   
   startGame() {
@@ -15,17 +15,17 @@ class MissOrMatch {
     this.busy = true;
     setTimeout(() => {
       this.shuffleCards(this.cardsArray);
-      this.countdown=this.startCountdown();
+      this.countdown = this.startCountdown();
       this.busy = false;
     }, 500)
     this.hideCards();
-    this.timeRemaining;
+    this.timer.innerText = this.timeRemaining;
     this.ticker.innerText = this.totalClicks;
   }
   startCountdown() {
     return setInterval(() => {
       this.timeRemaining--;
-      this.timer.innerText=this.timeRemaining;
+      this.timer.innerText = this.timeRemaining;
       if(this.timeRemaining === 0)
         this.gameOver();
     }, 1000);
@@ -82,7 +82,7 @@ cardMismatch(card1, card2) {
     }, 1000);
 }
 shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm.
-    for (let i = cardsArray.length - 1; i > 0;i--) {
+    for (let i = cardsArray.length - 1; i > 0; i--) {
         let randIndex = Math.floor(Math.random() * (i + 1));
         cardsArray[randIndex].style.order = i;
         cardsArray[i].style.order = randIndex;
