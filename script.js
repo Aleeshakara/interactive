@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.card');
 
 let hasFlippedCard = false;
 let lockboard = false;
-let firstCard, secondCard;
+let [firstCard, ], secondCard;
 
 function flipCard() {
   if (lockboard) return;
@@ -15,8 +15,8 @@ function flipCard() {
     return;
   }
   
-  secondCard this;
-  
+  secondCard = this;
+  lockBoard = true;
   checkForMatch();
 }
 
@@ -32,7 +32,6 @@ function disableCards() {
 }
 
 function unflipCards() {
-  lockboard = true;
   setTimeout(() => {
   firstCard.classList.remove('flip');
   secondCard.classList.remove('flip');
