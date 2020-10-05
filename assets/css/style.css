@@ -18,6 +18,11 @@ body {
   font-size: 6em;
 }
 
+.game-info {
+  color: #ccc;
+  font-size: 4em;
+}
+
 .game {
   width: 640px;
   height: 640px;
