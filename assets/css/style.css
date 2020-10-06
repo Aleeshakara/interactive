@@ -63,7 +63,7 @@ body {
  padding: 20px;
  position: absolute;
  border-radius: 5px;
- cardback-visibility: hidden;  
+ backface-visibility: hidden;  
 }
 
 .card.flip {
