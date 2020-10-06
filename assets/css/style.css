@@ -66,7 +66,7 @@ body {
  cardback-visibility: hidden;  
 }
 
-.card.flip {
+.card, .flip {
   transform: rotateY(180deg);
 }
 
