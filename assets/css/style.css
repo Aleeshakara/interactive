@@ -70,7 +70,9 @@ body {
   transform: rotateY(180deg);
 }
 
-  
+.card-front {
+  transform: rotateY(180deg);
+}
 
 
 
