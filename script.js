@@ -1,41 +1,45 @@
 const cards = document.querySelectorAll('.card');
 
 let hasFlippedCard = false;
-let lockboard = false;
-let [firstCard, ], secondCard;
+let lockBoard = false;
+let firstCard, secondCard;
 
 function flipCard() {
-  if (lockboard) return;
-  if (this === firstCard) return;
+  if(lockBoard) return;
+  if(this === firstCard) return;
+  
   this.classList.add('flip');
   
-  if (!hasFlippedCard) {
+  if(!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
     return;
   }
   
   secondCard = this;
-  lockBoard = true;
   checkForMatch();
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.framewaork === secondCard.dataset.framework;  
+  let isMatch = firstCard.dataset.framework === secondCard.
   isMatch ? disableCards() : unflipCards();
 }
 
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
-  secondCard.removeEventListener('clip, flipCard');
+  secondCard.removeEventListener('click', flipCard);
+  
   resetBoard();
 }
 
 function unflipCards() {
+  lockBoard = true;
+  
   setTimeout(() => {
   firstCard.classList.remove('flip');
   secondCard.classList.remove('flip');
-  resetBoard();  
+  
+    resetBoard();  
   }, 1500);
 }
 
@@ -46,7 +50,7 @@ function resetBoard() {
  
 (function shuffle() {
   cards.forEach(card => {
-    let randomPos = Math.random() * 12);
+    let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
 })();
