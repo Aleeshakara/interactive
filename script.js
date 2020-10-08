@@ -1,5 +1,11 @@
-const cards = document.querySelectorAll('.card');
+if(document.readyState === 'loading') {
+  document.addEventlistnener('DOMContentLoaded', ready();
+} else {
+  ready();  
+}  
+                             const cards = document.querySelectorAll('.card');
 
+  
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
