@@ -5,6 +5,7 @@
 }
 
 body {
+  margin: 0;
   height: 100vh;
   display: flex;
   background: radial-gradient(#9D5900, #3D2200);
@@ -29,7 +30,7 @@ body {
   font-size: 4em;
 }
 
-.game {
+.game-container {
   width: 640px;
   height: 640px;
   margin: auto;
@@ -39,24 +40,39 @@ body {
 }
 
 .card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
-  position: relative;
+  width: 100%;
+  height: 100%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   border-width: 1px;
-  border-style: solid;  
-  transform-style: preserve-3d;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-  transform: scale(1); 
-  transition: transform .5s;
+  border-style: solid;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform .5s ease-in-out;
 }
 
+.card.visible .card-back {
+  transform: rotateY(-180deg); 
+}
+
+.card.visible .card-front {
+  transform: rotateY(0); 
+}
 .card:active {
    transform: scale(0.97);
    transition: transform .2s;
 }
 
+.card-back {
+  background-color: none;
+  border-color: #FF6D00;
+  transform: rotateY(0); 
+}
 .card-front, .card-back {
  width: 100%;
  height: 100%;
@@ -66,11 +82,17 @@ body {
  backface-visibility: hidden;  
 }
 
+.card-front:hover .card-value {
+  transform: scale(1);
+}
+
 .card.flip {
   transform: rotateY(180deg);
 }
 
 .card-front {
+  background-color: none;
+  border-color: #333;
   transform: rotateY(180deg);
 }
 
@@ -86,7 +108,6 @@ body {
   align-items: center;
   flex-direction: column;
   color: #FF6D00;
-  font-family: Creepy, serif;
   transition: background-color 500ms, font-size 500ms;
 }
 
