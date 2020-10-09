@@ -14,8 +14,10 @@ function ready() {
     });
   });
   cards.forEach(card => {
-      card.addEventListener('cli')
-  
+      card.addEventListener('click', () => {
+      });
+  });
+}
                              const cards = document.querySelectorAll('.card');
 
   
