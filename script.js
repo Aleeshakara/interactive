@@ -1,8 +1,20 @@
 if(document.readyState === 'loading') {
-  document.addEventlistnener('DOMContentLoaded', ready();
+  document.addEventlistnener('DOMContentLoaded', ready());
 } else {
-  ready();  
+    ready();  
 }  
+
+function ready() {
+  let overlays = document.getElementsbyClassName('overlay-text'));
+  let cards = Array.from(document.getElementsByClassName('card'));
+  
+  overlay.forEach(overlay => {
+    overlay.addEventListener('click', () => {
+         overlay.classList.remove('visible');
+    })
+  });
+}  
+  
                              const cards = document.querySelectorAll('.card');
 
   
