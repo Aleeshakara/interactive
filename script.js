@@ -1,19 +1,20 @@
 if(document.readyState === 'loading') {
-  document.addEventlistnener('DOMContentLoaded', ready());
+  document.addEventlistener('DOMContentLoaded', ready());
 } else {
     ready();  
 }  
 
 function ready() {
-  let overlays = Array.from(document.getElementsbyClassName('overlay-text'));
+  let overlays = Array.from(document.getElementsByClassName('overlay-text'));
   let cards = Array.from(document.getElementsByClassName('card'));
   
-  overlay.forEach(overlay => {
+  overlays.forEach(overlay => {
     overlay.addEventListener('click', () => {
          overlay.classList.remove('visible');
-    })
+    });
   });
-}  
+  cards.forEach(card => {
+      card.addEventListener('cli')
   
                              const cards = document.querySelectorAll('.card');
 
