@@ -1,113 +1,118 @@
-class MissOrMatch {
-    constructor(totalTime, cards) {
-        this.cardsArray = cards;
-        this.totalTime = totalTime;
-        this.timeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining')
-        this.ticker = document.getElementById('flips');
-    }
+let cards = document.querySelectorAll('.card_inner')
+let firstClick = false
+let counter = 0
+let cardPair = []
 
-    startGame() {
-        this.totalClicks = 0;
-        this.timeRemaining = this.totalTime;
-        this.cardToCheck = null;
-        this.matchedCards = [];
-        this.busy = true;
-        setTimeout(() => {
-            this.shuffleCards(this.cardsArray);
-            this.countdown = this.startCountdown();
-            this.busy = false;
-        }, 500)
-        this.hideCards();
-        this.timer.innerText = this.timeRemaining;
-        this.ticker.innerText = this.totalClicks;
-    }
-    startCountdown() {
-        return setInterval(() => {
-            this.timeRemaining--;
-            this.timer.innerText = this.timeRemaining;
-            if(this.timeRemaining === 0)
-                this.gameOver();
-        }, 1000);
-    }
-    gameOver() {
-        clearInterval(this.countdown);
-        this.audioController.gameOver();
-        document.getElementById('game-over-text').classList.add('visible');
-    }
-    victory() {
-        clearInterval(this.countdown);
-        document.getElementById('victory-text').classList.add('visible');
-    }
-    hideCards() {
-        this.cardsArray.forEach(card => {
-            card.classList.remove('visible');
-            card.classList.remove('matched');
-        });
-    }
-    flipCard(card) {
-        if(this.canFlipCard(card)) {
-            this.audioController.flip();
-            this.totalClicks++;
-            this.ticker.innerText = this.totalClicks;
-            card.classList.add('visible');
+cards.forEach((card) => {
+    card.state = 'unclicked'
+})
 
-            if(this.cardToCheck) {
-                this.checkForCardMatch(card);
-            } else {
-                this.cardToCheck = card;
-            }
+shuffle()
+
+for(let i=0; i<cards.length; i++) {
+    cards[i].addEventListener('click', ()=> {
+        if(!firstClick){time()}
+        firstClick = true
+        
+         if(cards[i].state == 'unclicked'){
+            cards[i].style.transform = 'rotateY(180deg)'
+            cards[i].state = 'clicked'
+            counter++
+            cardPair.push(cards[i])
+            check()
+        }    
+   
+        else if(cards[i].state == 'clicked') {
+            cards[i].style.transform = 'rotateY(0deg)'
+            cards[i].state = 'unclicked'
+            counter--
+            cardPair = []
+        }    
+    })   
+} 
+
+function shuffle() {
+    let images = document.querySelectorAll('img')
+    let srcs = ['butterfly-1.png', 'butterfly-2.png']
+
+    for(let i=srcs.length-1; i>0; i--){
+        let j = Math.floor(Math.random() * i)
+        let temp = srcs[i]
+        srcs[i] = srcs[j]
+        srcs[j] = temp
+    }
+    
+    for(let i=0; i<images.length; i++) {
+        images[i].src =srcs[i]
+    }
+}    
+    
+       
+function check() {
+    if(counter==2){
+        if(cardPair[0].querySelector('img').src==cardPair[1].querySelector('img').src)
+            matched()
         }
-    }
-    checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
-            this.cardMatch(card, this.cardToCheck);
-        else 
-            this.cardMismatch(card, this.cardToCheck);
-
-        this.cardToCheck = null;
-    }
-    cardMatch(card1, card2) {
-        this.matchedCards.push(card1);
-        this.matchedCards.push(card2);
-        card1.classList.add('matched');
-        card2.classList.add('matched');
-        this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length)
-            this.victory();
-    }
-    cardMismatch(card1, card2) {
-        this.busy = true;
-        setTimeout(() => {
-            card1.classList.remove('visible');
-            card2.classList.remove('visible');
-            this.busy = false;
-        }, 1000);
-    }
-    shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm.
-        for (let i = cardsArray.length - 1; i > 0; i--) {
-            let randIndex = Math.floor(Math.random() * (i + 1));
-            cardsArray[randIndex].style.order = i;
-            cardsArray[i].style.order = randIndex;
-        }
-    }
-    getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src;
-    }
-    canFlipCard(card) {
-        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+     else{
+        unmatched(cardPair[0],cardPair[1])
     }
 }
-
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready);
-} else {
-    ready();
 }
 
-function ready() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MissOrMatch(100, cards);
+function matched(){
+    cardPair[0].state = 'blocked'
+    cardPair[1].state ='blocked'
+    counter = 0
+    cardPair = []
+    let score = document.querySelector('#score').innerHTML
+    score++
+    document.querySelector('#score').innerHTML = score    
+}
+
+function unmatched(x,y){
+    setTimeout(() => {
+        x.style.transform = 'rotateY(0deg)'
+        y.style.transform = 'rotateY(0deg)'
+    }, 750)
+    cardPair[0].state = 'unclicked'
+    cardPair[1].state = 'unclicked'
+    counter = 0
+    cardPair = []
+}   
+
+
+        
+ function time(){
+    let secs = 0
+    let mins = 0
+    let SS
+    let MM
+    setInterval(()=>{
+        secs++
+        if(secs==60){secs=0; mins++}
+        
+        secs<10?SS-`0${secs}`:SS=`${secs}`
+        mins<10?MM-`0${mins}`:SS=`${mins}`
+    
+        document.querySelector('#time').innerHTML = `${MM}:${SS}`
+    }, 1000)
+}   
+           
+        
+        
+        
+ 
+
+
+
+
+
+    
+
+
+
+
+
+       
 
     
