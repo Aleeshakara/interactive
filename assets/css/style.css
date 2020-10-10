@@ -1,168 +1,58 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  background: radial-gradient(#9D5900, #3D2200);
-}  
-
-.page-title {
-  color: #ccc;
-  font-family: serif;
-  font-weight: normal;
-  text-align: center;
-  font-size: 6em;
+  padding: 0;
+  background-color: #lavender;
 }
 
-.game-info-container {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-}
-
-.game-info {
-  color: #ccc;
-  font-size: 4em;
-}
-
-.game-container {
-  width: 640px;
-  height: 640px;
+#board {
+  height: 85px;
+  width: 450px;
+  border: 4px solid #black;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  perspective: 1000px;  
+  text-align: center;
+  margin-top: 15px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+
+#container {
+  height: 550px;
+  margin-left: 25px;
+ } 
+
+.card-outer {
+  height: 160px;
+  width: 120px;
+  background: transparent;
+  perspective: 1200px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 20px;
 }
 
-.card {
-  {
-  position: relative;
-  height: 175px;
-  width: 125px;
-}
-  
-.card-face {
-  width: 100%;
-  height: 100%);
+.card-inner {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   height: 100%;
-  border-radius: 12px;
-  border-width: 1px;
-  border-style: solid;
-  overflow: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5 ease;
+}
+
+.front, .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(40, 40, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
   backface-visibility: hidden;
-  transition: transform .5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card.visible .card-back {
-  transform: rotateY(-180deg); 
+.back {
+  transform: rotateY(180deg);
 }
 
-.card.visible .card-front {
-  transform: rotateY(0); 
-}
-.card:active {
-   transform: scale(0.97);
-   transition: transform .2s;
-}
+
   
-  .card.matched .card-front .card-value {
-  animation: dance 1s linear infinite 500ms;
-}
-
-.card-back {
-  background-color: none;
-  border-color: #FF6D00;
-  transform: rotateY(0); 
-}
-.card-front, .card-back {
- width: 100%;
- height: 100%;
- padding: 20px;
- position: absolute;
- border-radius: 5px;
- backface-visibility: hidden;  
-}
-
-.card-front:hover .card-value {
-  transform: scale(1);
-}
-
-.card.flip {
-  transform: rotateY(180deg);
-}
-
-.card-front {
-  background-color: none;
-  border-color: #333;
-  transform: rotateY(180deg);
-}
-
-.overlay-text {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  display: none;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #FF6D00;
-  transition: background-color 500ms, font-size 500ms;
-}
-
-.overlay-text-small {
-  font-size: .3em;
-}
-
-.overlay-text.visible {
-  display: flex;
-  animation: overlay-grow 500ms forwards;
-}
-@keyframes dance {
-  0%, 100% {
-    transform: rotate(0)
-  }
-  25% {
-    transform: rotate(-30deg)
-  }
-  75% {
-    transform: rotate(30deg)
-  }
-}
-
-@keyframes overlay-grow {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 0;
-  }
-  to {
-    background-color: rgba(0, 0, 0, .8);
-    font-size: 10em;
-  }
-}
-
-@media (max-width: 600px) {
-  .game-container {
-    grid-template-columns: repeat(2, auto)
-  }
-
-  .game-info-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+  
 
 
 
