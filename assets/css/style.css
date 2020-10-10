@@ -1,3 +1,24 @@
 .button {
-  
+  width: 100px;
+  height: 100px;
+}
+
+.top-left-button {
+  border-top-left-radius: 200px;
+  background-color: green;
+}  
+
+.top-right-button {
+  border-top-right-radius: 200px;
+  background-color: red; 
+}  
+
+.bottom-right-button {
+  border-bottom-right-radius: 200px;
+  background-color: blue;
+}  
+
+.bottom-left-button {
+  border-bottom-left-radius: 200px;
+  background-color: yellow;
 }  
