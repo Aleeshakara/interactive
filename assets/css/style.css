@@ -21,7 +21,7 @@ body {
 .card-outer {
   height: 160px;
   width: 120px;
-  background: transparent;
+  background: #ccc;
   perspective: 1200px;
   float: left;
   margin-left: 40px;
