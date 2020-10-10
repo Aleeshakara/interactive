@@ -29,3 +29,10 @@ body {
   border-bottom-left-radius: 100%;
   background-color: yellow;
 }  
+
+.center {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  backbround-color: black;
+}  
