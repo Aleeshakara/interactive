@@ -1,9 +1,9 @@
-# NAME....
+# QuickClick
 
 ## Interactive Frontend Development Milestone Project
 
 
-![Image]()FAVICON
+![Image](https://github.com/Aleeshakara/interactive-frontend/blob/main/assets/images/favicon.png)
 
 This is my first attempt at a Javascript website...
 
@@ -137,17 +137,17 @@ I chose to keep it simple by using black, white and grey. I feel it offers a cle
 
 *	[HTML](https://html.com/)- The main structure of the pages
 *	[CSS](https://css-tricks.com)- The overall style
-*	[Bootstrap](https://getbootstrap.com)- CSS framework used for speed with components 
-* [Hover.css](https://ianlunn.github.io/Hover/)- Used for hover effect on icon and text links
+* [Javascript](https://www.javascript.com/)- The page interactivity
+
 *	[GitHub](https://github.com)- Used for storing projects
 *	[GitPod](https://www.gitpod.io)- Used to commit files to Git
 *	[Git](https://git-scm.com)- Used for version control and to push to GitHub
 *	[GitHub Pages](https://pages.github.com)- Used to deploy
 * [Balsamiq](https://balsamiq.com/)- Used to create wireframes
-* [Google Fonts](https://fonts.google.com)- Fonts used
-* [Font Awesome](https://fontawesome.com/)- Used for the Social Media icons
+
+
 * [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools/open)- Used to inspect the codes used
-* [Javascript](https://www.javascript.com/)- Used to support style
+
 * [Autoprefixer](https://autoprefixer.github.io/)- Used to parse the CSS and add vendor prefixes
 
 
@@ -205,7 +205,7 @@ https://github.com/Aleeshakara/
 ## Credits
 
 * [w3schools](https://www.w3schools.com/)- Examples, inspiration
-* Code Instiute- Tutorials, footer code
+* [Code Instiute](https://codeinstitute.net/)- Tutorials
 * [Favicon](https://favicon.io/)
 * [Bootstrap](https://getbootstrap.com/)- Contact form
 * [StartBootstrap](https://startbootstrap.com/)-Projects 
@@ -215,10 +215,10 @@ https://github.com/Aleeshakara/
 
 * Text
 
-Most of the text has been written by me. The projects page and Contact page was created using copied text.
+The text has been written by me. 
 
 * Media
-
+-Sounds
 
 
 
