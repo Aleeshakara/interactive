@@ -5,11 +5,11 @@
 
 ![Image](https://github.com/Aleeshakara/interactive-frontend/blob/main/assets/images/favicon.png)
 
-This is my first attempt at a Javascript website. I chose to design a memory game and I used the "Simon" game as inspiration.
+This is my first attempt at a interactive website, using Javascript. I chose to design a memory game and I used the "Simon" game as inspiration.
 
 I started project, which can be updated and improved as my knowledge and experience grows.
 
-Please click [here] () for my live website.
+Please click [here]() for my live website.
 
 ## Contents
 
