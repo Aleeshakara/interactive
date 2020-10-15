@@ -167,7 +167,7 @@ https://github.com/Aleeshakara/
 
 * [w3schools](https://www.w3schools.com/)- Examples, inspiration
 * [Code Instiute](https://codeinstitute.net/)- Tutorials
-* [Favicon](https://favicon.io/)
+* [Favicon](https://favicon.io/)- Personalised webpage icon
  
 
 
