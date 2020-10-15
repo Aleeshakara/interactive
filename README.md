@@ -5,7 +5,7 @@
 
 ![Image](https://github.com/Aleeshakara/interactive-frontend/blob/main/assets/images/favicon.png)
 
-This is my first attempt at a Javascript website...
+This is my first attempt at a Javascript website. I chose to design a memory game and I used the "Simon" game as inspiration.
 
 I started project, which can be updated and improved as my knowledge and experience grows.
 
@@ -45,38 +45,18 @@ Please click [here] () for my live website.
 
 >As a first-time user, I want to:
 * Read the information easily
-* 
-* Know what information I expect to see once I click a link
-
-#### Prospective Employer
-
->As a prospective employer, I want to:
-* Know how this developer would fit in with our company’s culture, based on their experience and social media activity
-* See clear demonstrations that this developer has their relevant skills showcased clearly, starting with a visually aesthetic website
-* 
-* 
-* 
-
-#### Potential Client
-
->As a potential client, I want to:
-* Easily contact this developer
-* 
-* See that the developer has made this website user friendly, mobile friendly and easy to read
-* If this developer can produce the type of experience I want for my business
-* See a professional website by a professional developer
+* Understand the nature of the game
+* Enjoy the game
 
 #### Repeat User
 
 >As a repeat user, I want to:
-* Clearly see any new updates and new projects, which have uploaded.
+* Clearly see any new updates 
+* Feel confident using the site
+* Enjoy interacting with the game
 
 ### User Goals
 
-* The developer wants to bring awareness to their brand and be open to potential project collaborations or job opportunities
-* Employers and recruiters want to learn more about a potential employee, via the website and social media
-* Designers/ developers want to collaborate with developer
-* 
 * All users want to easily navigate the website
 
 
@@ -93,32 +73,17 @@ Please see below:
 ### Existing Features
 
 #### Home Page:
-* Consists of:
-  -  
-  - 
-  - 
-
-
-####  Page:
-* 
-
-#### :
-* 
-
-#### :
-* 
-
-#### All Pages:
-* The navigation menu is at the top of each page. It allows users to access all of the website’s pages and the CV in a separate page, allowing the user to return to the website easily
-* The footer contains links for 
-All links have a  hover
+  - Page overlay, which invites players to click to enter
+  - QuickClick game
+  - Game instructions
 
 #### Colours
 
-I chose to keep it simple by using black, white and grey. I feel it offers a clean look and allowed me to use other elements to catch the users' attention. The Projects page contains colour, as I have copied the original code for the page.
+I chose to use black, white, grey, red, green, orange and purple . I feel it offers a simple look and allowed me to use Javascript to catch the users' attention. 
 
 #### Fonts
 
+I  kept it simple by using Arial, as it's a clear easy to read font
 
 
 ### Features Left to Implement
@@ -138,16 +103,12 @@ I chose to keep it simple by using black, white and grey. I feel it offers a cle
 *	[HTML](https://html.com/)- The main structure of the pages
 *	[CSS](https://css-tricks.com)- The overall style
 * [Javascript](https://www.javascript.com/)- The page interactivity
-
 *	[GitHub](https://github.com)- Used for storing projects
 *	[GitPod](https://www.gitpod.io)- Used to commit files to Git
 *	[Git](https://git-scm.com)- Used for version control and to push to GitHub
 *	[GitHub Pages](https://pages.github.com)- Used to deploy
 * [Balsamiq](https://balsamiq.com/)- Used to create wireframes
-
-
 * [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools/open)- Used to inspect the codes used
-
 * [Autoprefixer](https://autoprefixer.github.io/)- Used to parse the CSS and add vendor prefixes
 
 
@@ -207,8 +168,7 @@ https://github.com/Aleeshakara/
 * [w3schools](https://www.w3schools.com/)- Examples, inspiration
 * [Code Instiute](https://codeinstitute.net/)- Tutorials
 * [Favicon](https://favicon.io/)
-* [Bootstrap](https://getbootstrap.com/)- Contact form
-* [StartBootstrap](https://startbootstrap.com/)-Projects 
+ 
 
 
 ### Content
