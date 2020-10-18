@@ -30,34 +30,22 @@ Please click [here]() for my live website.
 
 ## UX
 
+### Project Goals
+
+The goal of this project is understanding Javascript by producing an interactive front end memory game. 
+
 ### User Stories
 
 #### Developer
 
 >As a developer, I want to:
-* Make it easy for users to navigate the website
 * Make a website that appeals to many different users
-* Showcase my skills/ experience as a developer
-* Show that I am a good fit for collaborations and job opportunities
-
-
-#### First Time visitor
-
->As a first-time user, I want to:
-* Read the information easily
-* Understand the nature of the game
-* Enjoy the game
-
-#### Repeat User
-
->As a repeat user, I want to:
-* Clearly see any new updates 
-* Feel confident using the site
-* Enjoy interacting with the game
+* Showcase my skills as a developer
 
 ### User Goals
 
 * All users want to easily navigate the website
+* 
 
 
 ### Wireframes
