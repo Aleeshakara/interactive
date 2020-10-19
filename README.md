@@ -86,10 +86,10 @@ The page uses the font Fredoka, as it's fun. I  kept it simple by using Arial fo
 
 ### Features Left to Implement
 
-- High score page
-- Personalised game sounds
-- Win/ lose sounds
-- Sound on/off option
+* High score page
+* Personalised game sounds
+* Win/ lose sounds
+* Sound on/off option
 * Accessibility adjustments (Content Adjustments, Colour & Display Adjustments, Navigation Adjustments)
 * Mobile responsiveness
 
