@@ -176,7 +176,7 @@ Most of the text has been by me, with permission. I wrote the game rules and mad
 
 * Media
 
-Sounds Provided by feeCodeCamp
+Sounds Provided by [feeCodeCamp](https://www.freecodecamp.org/)
 
 
 
