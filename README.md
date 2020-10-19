@@ -1,4 +1,4 @@
-# QuickClick
+# QuickClick! - Memory game
 
 ## Interactive Frontend Development Milestone Project
 
@@ -42,18 +42,28 @@ The goal of this project is understanding Javascript by producing an interactive
 * Make a website that appeals to many different users
 * Showcase my skills as a developer
 
+#### Player
+
+>As a player, I want:
+* To see a clear display
+* To be able to choose the difficulty of the game
+* To hear game sounds
+* To see my progress
+* A game that beeps and flashes to indicate the sequence
+* To see the game rules as i play
+
 ### User Goals
 
 * All users want to easily navigate the website
-* 
+* To play a fun memory game, choose the difficulty and improve over time. 
 
 
 ### Wireframes
 
-[Balsamiq](https://balsamiq.com/) was used to create the wireframes for mobile and desktop. This gave me an opportunity to make decisions about the layout across the screen sizes. The final website differs from the original plan, because the site doesn't appear as overcrowed as initially thought. 
+[Balsamiq](https://balsamiq.com/) was used to create the wireframe for desktop an mobile. 
 Please see below:
-* [Desktop]() WIREFRAME LINK
-* [Mobile]() WIREFRAME LINK
+* [Desktop](https://github.com/Aleeshakara/interactive-frontend/blob/main/Wireframes/QuickClick!-Desktop.pdf) 
+* [Mobile](https://github.com/Aleeshakara/interactive-frontend/blob/main/Wireframes/QuickClick!-Mobile.pdf) 
 
 
 ## Features
@@ -61,29 +71,27 @@ Please see below:
 ### Existing Features
 
 #### Home Page:
-  - Page overlay, which invites players to click to enter
-  - QuickClick game
-  - Game instructions
+  * Page overlay, which invites players to click to enter
+  * QuickClick! game
+  * Game instructions
 
 #### Colours
 
-I chose to use black, white, grey, red, green, orange and purple . I feel it offers a simple look and allowed me to use Javascript to catch the users' attention. 
+I chose to use black, white, grey, red, green, orange and purple for the game layout. I used brighter colurs for the flashes- fuchsia, orangered, chartreuse, and light coral. I feel it offers a simple look and allowed me to use Javascript to catch the users' attention. 
 
 #### Fonts
 
-I  kept it simple by using Arial, as it's a clear easy to read font
+The page uses the font Fredoka, as it's fun. I  kept it simple by using Arial for the game rules, as it's a clear easy to read font. 
 
 
 ### Features Left to Implement
 
-* 
-* 
-* 
-* 
-* 
-* 
+- High score page
+- Personalised game sounds
+- Win/ lose sounds
+- Sound on/off option
 * Accessibility adjustments (Content Adjustments, Colour & Display Adjustments, Navigation Adjustments)
-* 
+* Mobile responsiveness
 
 
 ## Technologies used
@@ -105,9 +113,8 @@ I  kept it simple by using Arial, as it's a clear easy to read font
 ### Test Automations
 
 * [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools/open) was used to view how responsive the website was across different sized devices
-* [W3C Markup Validation Service](https://validator.w3.orghttps://jigsaw.w3.org/css-validator/) was used to valiadte the HTML code was free from warnings and errors
-* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to valiadte the CSS code was free from warnings and errors
-* [Am I Responsive?](https://amiresponsive.co.uk/) was used to view how responsive the website was across different sized devices at the same time
+* [W3C Markup Validation Service](https://validator.w3.orghttps://jigsaw.w3.org/css-validator/) was used to valiadte the HTML code. Parse error <!DOCTYPE html>... stylesheets should not have HTML synatax
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to valiadte the CSS 
 
 ### Manual Testing
 
@@ -115,7 +122,7 @@ This website has been tested through a GitPod server, via Code Institute (python
 
 I have tried my website on Google Chrome and Safari. Both appear to work as expected. 
 
-Devices tested are Samsung Galaxy S20+, Samsung Galaxy S6, iPod Touch, MacBook Air, Samsung Galaxy Tab A, Huawei P30 Lite and iPad 10.2.
+Devices tested are Samsung Galaxy S20+, Samsung Galaxy S6, iPod Touch, MacBook Air, Samsung Galaxy Tab A, Huawei P30 Lite and iPad 10.2. Not yet responsive for smaller screens.
 
 Please see [here]() for Usability Testing
 
@@ -156,6 +163,8 @@ https://github.com/Aleeshakara/
 * [w3schools](https://www.w3schools.com/)- Examples, inspiration
 * [Code Instiute](https://codeinstitute.net/)- Tutorials
 * [Favicon](https://favicon.io/)- Personalised webpage icon
+* [feeCodeCamp](https://www.freecodecamp.org/)- Tutorial
+* [PortExe](https://portexe.com/)- Tutorial
  
 
 
@@ -163,10 +172,10 @@ https://github.com/Aleeshakara/
 
 * Text
 
-The text has been written by me. 
+Most of the text has been by me, with permission. I wrote the game rules and made small changes throughout.
 
 * Media
--Sounds
+-Sounds Provided by feeCodeCamp
 
 
 
