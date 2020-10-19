@@ -175,7 +175,8 @@ https://github.com/Aleeshakara/
 Most of the text has been by me, with permission. I wrote the game rules and made small changes throughout.
 
 * Media
--Sounds Provided by feeCodeCamp
+
+Sounds Provided by feeCodeCamp
 
 
 
