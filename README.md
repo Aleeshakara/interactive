@@ -26,7 +26,7 @@ Please click [here]() for my live website.
 * [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
-* [Acknowledgements](#acknowledgements)
+
 
 ## UX
 
@@ -180,7 +180,7 @@ Sounds Provided by [feeCodeCamp](https://www.freecodecamp.org/)
 
 
 
-## Acknowledgements
+
 
 
 
